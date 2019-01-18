@@ -25,24 +25,25 @@ binary_search(set2, "broods", 0, set2.length - 1)
 
 
 
-# def binary_search(set, search_item)
-#   low = 0
-#   high = set.length - 1
-#   while low < high
-#     midpoint = (low + high)/2
-#     guess  = set[midpoint]
-#     if guess == search_item
-#       return midpoint
-#     elsif guess > search_item
-#       high = midpoint - 1
-#     else
-#       low = midpoint + 1
-#     end
-#   end
-# end
-#
-# test_list = [1, 2, 4, 8, 9, 18, 22, 24, 32, 33, 49, 88, 99]
-# puts binary_search(test_list, 32)
+def binary_search(set, search_item)
+  low = 0
+  high = set.length - 1
+  while low < high
+    midpoint = (low + high)/2
+    guess  = set[midpoint]
+    puts set[midpoint]
+    if guess == search_item
+      return midpoint
+    elsif guess > search_item
+      high = midpoint - 1
+    else
+      low = midpoint + 1
+    end
+  end
+end
+
+test_list = [1, 2, 4, 8, 9, 18, 22, 24, 32, 33, 49, 88, 99]
+puts binary_search(test_list, 33)
 
 #Exercises
 #Chapter 1 - Binary Search
