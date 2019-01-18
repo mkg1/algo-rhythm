@@ -1,21 +1,48 @@
-def binary_search(set, search_item)
-  low = 0
-  high = set.length - 1
-  while low < high
-    midpoint = (low + high)/2
-    guess  = set[midpoint]
-    if guess == search_item
-      return midpoint
-    elsif guess > search_item
-      high = midpoint - 1
-    else
-      low = midpoint + 1
-    end
+# Binary algorith: O(logn), must be sorted set
+# Pseudo: given a data set and a search param -->
+# cut set in half; is search param greater/less than? Create new subset;
+# is search param greater/less than new midpoint?
+
+def binary_search(set, lookup, low, high)
+
+  midpoint = (low + high)/2
+  if set[midpoint] == lookup
+     puts midpoint
+  elsif  lookup > set[midpoint]
+    low = midpoint + 1
+    binary_search(set, lookup, low, high)
+  else
+    high = midpoint - 1
+    binary_search(set, lookup, low, high)
   end
 end
 
-test_list = [1, 2, 4, 8, 9, 18, 22, 24, 32, 33, 49, 88, 99]
-puts binary_search(test_list, 32)
+
+set1 = ["beatles", "rolling stones", "jesus and mary chain", "borns", "broods", "francis & the lights", "neil young", "pat benatar", "the xx", "jamiexx", "foals"]
+set2 = set1.sort
+
+binary_search(set2, "broods", 0, set2.length - 1)
+
+
+
+# def binary_search(set, search_item)
+#   low = 0
+#   high = set.length - 1
+#   while low < high
+#     midpoint = (low + high)/2
+#     guess  = set[midpoint]
+#     if guess == search_item
+#       return midpoint
+#     elsif guess > search_item
+#       high = midpoint - 1
+#     else
+#       low = midpoint + 1
+#     end
+#   end
+# end
+#
+# test_list = [1, 2, 4, 8, 9, 18, 22, 24, 32, 33, 49, 88, 99]
+# puts binary_search(test_list, 32)
 
 #Exercises
 #Chapter 1 - Binary Search
