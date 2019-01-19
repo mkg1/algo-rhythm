@@ -1,3 +1,4 @@
+Selection sort algorithm: O(n^2)
 # # Chapter 2 - Selection Sort
 # 2.1 You have a list that will require lots of writes, and a few reads; do you use an array or list? | list
 # X 2.2 You are building an app to store a list of orders; servers add to the back of the queue, chefs remove from top of it. Should it be an array or linked list? | array. nope. use a list because faster inserts/deletions. Also, adding to the front/removing from back so you don't need random access (aka arrays)
