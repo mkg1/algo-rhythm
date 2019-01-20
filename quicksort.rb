@@ -1,3 +1,9 @@
+# Quicksort - faster than selection sort; uses divide and conquer approach.
+# Base case --> arrays of 1 or empty arrays
+# Arrays of 2 --> check if first is smaller than second, if not, swap 'em
+# Arrays of 3 or more --> pick an element to be the pivot, partition into an arrays of smaller and larger numbers, use either this method again, or the base/array of 2 case
+# Worst case: O(n^2); average O(nlogn) (or merge sort)
+
 # # Chapter 4 - Quicksort
 # 4.1 Write out the code for the earlier sum function
 # 4.2 Write a recursive function to count the number of items in a lists
